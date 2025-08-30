@@ -13,7 +13,7 @@ interface DownloadResultsProps {
 export const DownloadResults: React.FC<DownloadResultsProps> = ({ files }) => {
   const handleDownload = async (fileId: string, fileType: 'plain' | 'summary') => {
     try {
-      const response = await fetch(`http://localhost:8000/download/${fileId}/${fileType}`);
+      const response = await fetch(`https://legalprocessorbackend.vercel.app/download/${fileId}/${fileType}`);
       
       if (!response.ok) {
         throw new Error('Download failed');

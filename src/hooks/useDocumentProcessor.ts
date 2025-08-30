@@ -23,7 +23,7 @@ interface ProcessedFile {
   summary: string;
 }
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://legalprocessorbackend.vercel.app';
 
 export const useDocumentProcessor = () => {
   const [currentJob, setCurrentJob] = useState<string | null>(null);
